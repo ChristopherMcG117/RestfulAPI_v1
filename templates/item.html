@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %}Item{% endblock %}
+{% block content %}
+<header class="masthead">
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="item-heading">
+          {% if hardware_item %}
+          <h1>{{ hardware_item.componentName }}</h1>
+          <h2 class="subheading">{{ hardware_item.componentType }}</h2>
+          <span class="meta"
+            >Made by
+            <a href="#">{{ hardware_item.manufacturer }}</a>
+            Price: £{{ hardware_item.price }}
+          </span>
+          {% elif software_item %}
+          <h1>{{ software_item.softwareName }}</h1>
+          <h2 class="subheading">{{ software_item.softwareType }}</h2>
+          <span class="meta"
+            >Made by
+            <a href="#">{{ software_item.manufacturer }}</a>
+            Price: £{{ software_item.price }}
+          </span>
+          {% elif peripheral_item %}
+          <h1>{{ peripheral_item.deviceName }}</h1>
+          <h2 class="subheading">{{ peripheral_item.peripheralType }}</h2>
+          <span class="meta"
+            >Made by
+            <a href="#">{{ peripheral_item.manufacturer }}</a>
+            Price: £{{ peripheral_item.price }}
+          </span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<article>
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      {% if hardware_item %}
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        Compatibility: {{ hardware_item.compatibility|safe }}
+        <div class="d-flex justify-content-end mb-4">
+          <a
+            class="btn btn-primary float-right"
+            href="{{url_for('edit_item', id=hardware_item._id)}}"
+            >Edit Item</a
+          >
+        </div>
+        </div>
+        {% elif software_item %}
+        <div class="col-md-10 col-lg-8 col-xl-7">
+        Liscense Type: {{ software_item.licenseType|safe }}
+        {% for versions in software_item.version %}
+          <p class="item-componentName">VersionNumber: {{ versions.versionNumber }}</p>
+            <p class="item-meta"> Size: {{ versions.size }}MB </p>
+            <p class="item-meta"> lastUpdate: {{ versions.lastUpdate }}, Supported: {{ versions.supported }} </p>
+          <hr class="my-4" />
+          {% endfor %}
+        </div>
+        {% elif peripheral_item %}
+        <div class="col-md-10 col-lg-8 col-xl-7">
+        Compatibility: {{ peripheral_item.compatibility|safe }}
+        <p class="item-meta">
+          {% if peripheral_item.colour %}
+          Colour:
+          {% for colours in peripheral_item.colour %}
+            {{ colours }},
+          {% endfor %}
+          {% endif %}
+        </p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+</article>
+{% endblock %}

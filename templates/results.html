@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %}Results{% endblock %}
+
+{% block content %}
+<header
+  class="masthead"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>{{ title }}</h1>
+          <span class="subheading">{{ description }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      <!-- Item preview-->
+      {% for item in items %}
+      <div class="item-preview">
+          <a href="{{ url_for('show_item', id=item._id) }}">
+          {% if item.componentName %}
+              {% if item.full_title%}
+                <h2 class="item-componentName">{{ item.full_title }}</h2>
+              {% else %}
+                  <h2 class="item-componentName">{{ item.componentName }}</h2>
+                  <h3 class="item-componentType">{{ item.componentType }}</h3>
+              {% endif %}
+          {% elif item.deviceName %}
+              {% if item.full_title%}
+                <h2 class="item-componentName">{{ item.full_title }}</h2>
+              {% else %}
+                  <h2 class="item-componentName">{{ item.deviceName }}</h2>
+                  <h3 class="item-componentType">{{ item.deviceType }}</h3>
+              {% endif %}
+          {% elif item.softwareName %}
+          <h2 class="item-componentName">{{ item.softwareName }}</h2>
+          <h3 class="item-componentType">{{ item.softwareType }}</h3>
+          {% elif item.total_products %}
+          <h2 class="item-componentName">{{ item._id }}</h2>
+          <h3 class="item-componentType">{{ item.total_products }}</h3>
+          {% endif %}
+          </a>
+        {% if item.manufacturer %}
+        <p class="item-meta">
+          Made by
+          <a href="#">{{item.manufacturer}}</a>,
+          Price: £{{item.price}}
+        </p>
+        {% endif %}
+        {% if item.colour %}
+        <p class="item-meta">
+          Colour:
+          {% for colours in item.colour %}
+            {{ colours }}
+          {% endfor %}
+        </p>
+        {% endif %}
+        {% if item.softwareName %}
+        {% for versions in item.version %}
+          <p class="item-componentName">VersionNumber: {{ versions.versionNumber }}</p>
+            <p class="item-meta"> Size: {{ versions.size }}MB </p>
+            <p class="item-meta"> lastUpdate: {{ versions.lastUpdate }}, Supported: {{ versions.supported }} </p>
+          <hr class="my-4" />
+          {% endfor %}
+        {% endif %}
+      </div>
+      <!-- Divider-->
+      <hr class="my-4" />
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,282 @@
+{
+  "hardwareComponents": [
+    {
+      "componentName": "Intel Core i7-11700K",
+      "componentType": "CPU",
+      "price": 399.99,
+      "manufacturer": "Intel",
+      "compatibility": "LGA 1200"
+    },
+    {
+      "componentName": "AMD Ryzen 9 5900X",
+      "componentType": "CPU",
+      "price": 549.99,
+      "manufacturer": "AMD",
+      "compatibility": "AM4"
+    },
+    {
+      "componentName": "NVIDIA GeForce RTX 3080",
+      "componentType": "GPU",
+      "price": 799.99,
+      "manufacturer": "NVIDIA",
+      "compatibility": "PCIe 4.0"
+    },
+    {
+      "componentName": "Corsair Vengeance RGB Pro 32GB",
+      "componentType": "RAM",
+      "price": 199.99,
+      "manufacturer": "Corsair",
+      "compatibility": "DDR4"
+    },
+    {
+      "componentName": "Samsung 970 EVO 1TB",
+      "componentType": "SSD",
+      "price": 149.99,
+      "manufacturer": "Samsung",
+      "compatibility": "M.2"
+    },
+    {
+      "componentName": "Seagate Barracuda 2TB",
+      "componentType": "HDD",
+      "price": 79.99,
+      "manufacturer": "Seagate",
+      "compatibility": "3.5-inch"
+    },
+    {
+      "componentName": "ASUS ROG Strix B550-F",
+      "componentType": "Motherboard",
+      "price": 199.99,
+      "manufacturer": "ASUS",
+      "compatibility": "AM4"
+    },
+    {
+      "componentName": "NZXT Kraken X63",
+      "componentType": "Cooler",
+      "price": 149.99,
+      "manufacturer": "NZXT",
+      "compatibility": "Various Sockets"
+    },
+    {
+      "componentName": "EVGA Supernova 850W",
+      "componentType": "PSU",
+      "price": 129.99,
+      "manufacturer": "EVGA",
+      "compatibility": "ATX"
+    },
+    {
+      "componentName": "Fractal Design Meshify C",
+      "componentType": "Case",
+      "price": 89.99,
+      "manufacturer": "Fractal Design",
+      "compatibility": "ATX"
+    },
+    {
+      "componentName": "Logitech G Pro X",
+      "componentType": "Keyboard",
+      "price": 149.99,
+      "manufacturer": "Logitech",
+      "compatibility": "USB"
+    },
+    {
+      "componentName": "Razer DeathAdder V2",
+      "componentType": "Mouse",
+      "price": 69.99,
+      "manufacturer": "Razer",
+      "compatibility": "USB"
+    },
+    {
+      "componentName": "BenQ EX2780Q",
+      "componentType": "Monitor",
+      "price": 349.99,
+      "manufacturer": "BenQ",
+      "compatibility": "27-inch, 1440p"
+    },
+    {
+      "componentName": "Audio-Technica ATH-M50x",
+      "componentType": "Headphones",
+      "price": 149.99,
+      "manufacturer": "Audio-Technica",
+      "compatibility": "3.5mm Jack"
+    },
+    {
+      "componentName": "G.Skill Trident Z RGB 16GB",
+      "componentType": "RAM",
+      "price": 119.99,
+      "manufacturer": "G.Skill",
+      "compatibility": "DDR4"
+    },
+    {
+      "componentName": "MSI MAG B550 TOMAHAWK",
+      "componentType": "Motherboard",
+      "price": 159.99,
+      "manufacturer": "MSI",
+      "compatibility": "AM4"
+    },
+    {
+      "componentName": "Western Digital Blue 500GB",
+      "componentType": "SSD",
+      "price": 69.99,
+      "manufacturer": "Western Digital",
+      "compatibility": "2.5-inch, SATA"
+    },
+    {
+      "componentName": "AMD Ryzen 5 5600X",
+      "componentType": "CPU",
+      "price": 299.99,
+      "manufacturer": "AMD",
+      "compatibility": "AM4"
+    },
+    {
+      "componentName": "MSI GeForce GTX 1660",
+      "componentType": "GPU",
+      "price": 249.99,
+      "manufacturer": "MSI",
+      "compatibility": "PCIe 3.0"
+    },
+    {
+      "componentName": "Crucial BX500 1TB",
+      "componentType": "SSD",
+      "price": 79.99,
+      "manufacturer": "Crucial",
+      "compatibility": "2.5-inch, SATA"
+    }
+  ],
+  "softwareProducts": [
+    {
+      "softwareName": "Windows 10 Home",
+      "softwareType": "Operating System",
+      "price": 139.99,
+      "manufacturer": "Microsoft",
+      "licenseType": "OEM",
+      "version": [
+        {
+          "versionNumber": 11.5,
+          "size": 58,
+          "lastUpdate": "10/12/2021",
+          "supported": "True"
+        },
+        {
+          "versionNumber": 9.8,
+          "size": 62,
+          "lastUpdate": "13/08/2019",
+          "supported": "True"
+        },
+        {
+          "versionNumber": 9.4,
+          "size": 60,
+          "lastUpdate": "10/05/2019",
+          "supported": "False"
+        }
+      ]
+    },
+    {
+      "softwareName": "Adobe Photoshop CC",
+      "softwareType": "Photo Editing",
+      "price": 20.99,
+      "manufacturer": "Adobe",
+      "licenseType": "Subscription",
+      "version": [
+        {
+          "versionNumber": 3.2,
+          "size": 213,
+          "lastUpdate": "16/11/2022",
+          "supported": "True"
+        },
+        {
+          "versionNumber": 3.0,
+          "size": 211,
+          "lastUpdate": "22/10/2021",
+          "supported": "False"
+        },
+        {
+          "versionNumber": 2.9,
+          "size": 223,
+          "lastUpdate": "24/09/2019",
+          "supported": "False"
+        }
+      ]
+    },
+    {
+      "softwareName": "Microsoft Office 365",
+      "softwareType": "Office Suite",
+      "price": 9.99, 
+      "manufacturer": "Microsoft",
+      "licenseType": "Subscription",
+      "version": [
+        {
+          "versionNumber": 5.5,
+          "size": 42,
+          "lastUpdate": "10/09/2023",
+          "supported": "True"
+        },
+        {
+          "versionNumber": 5.2,
+          "size": 40,
+          "lastUpdate": "15/11/2022",
+          "supported": "True"
+        },
+        {
+          "versionNumber": 4.9,
+          "size": 39,
+          "lastUpdate": "18/01/2022",
+          "supported": "True"
+        }
+      ]
+    },
+    {
+      "softwareName": "Norton 360 Deluxe",
+      "softwareType": "Antivirus",
+      "price": 49.99, 
+      "manufacturer": "NortonLifeLock",
+      "licenseType": "Subscription"
+    },
+    {
+      "softwareName": "Autodesk AutoCAD",
+      "softwareType": "CAD Software",
+      "price": 1690.00, 
+      "manufacturer": "Autodesk",
+      "licenseType": "Subscription"
+    }
+  ],
+  "peripheralDevices": [
+    {
+      "deviceName": "Logitech C922 Pro Stream",
+      "deviceType": "Webcam",
+      "price": 99.99,
+      "manufacturer": "Logitech",
+      "compatibility": "USB"
+    },
+    {
+      "deviceName": "Blue Yeti USB Microphone",
+      "deviceType": "Microphone",
+      "price": 129.99,
+      "manufacturer": "Blue",
+      "compatibility": "USB",
+      "colour": ["black", "white", "blue"]
+    },
+    {
+      "deviceName": "Elgato Stream Deck",
+      "deviceType": "Stream Controller",
+      "price": 149.99,
+      "manufacturer": "Elgato",
+      "compatibility": "USB",
+      "colour": ["black", "grey", "blue", "white"]
+    },
+    {
+      "deviceName": "TP-Link Archer T9UH",
+      "deviceType": "Wi-Fi Adapter",
+      "price": 49.99,
+      "manufacturer": "TP-Link",
+      "compatibility": "USB",
+      "colour": ["black", "grey"]
+    },
+    {
+      "deviceName": "SteelSeries QcK Gaming Mouse Pad",
+      "deviceType": "Mouse Pad",
+      "price": 14.99,
+      "manufacturer": "SteelSeries",
+      "compatibility": "N/A",
+      "colour": ["red", "blue", "black", "orange", "white"]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block title %}Hardware Company{% endblock %}
+
+{% block content %}
+<header
+  class="masthead"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>Hardware Company</h1>
+          <span class="subheading">Products Sold</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      <hr class="my-4" />
+      <h1>Hardware</h1>
+      <hr class="my-4" />
+      <!-- hardware preview-->
+      {% for item in hardware_items %}
+      <div class="item-preview">
+        <a href="{{ url_for('show_item', id=item._id) }}">
+          <h2 class="item-componentName">{{ item.componentName }}</h2>
+          <h3 class="item-componentType">{{ item.componentType }}</h3>
+        </a>
+        <p class="item-meta">
+          Made by {{item.manufacturer}}
+          <br>
+          Price: £{{item.price}}
+          <a href="{{url_for('delete_item', id=item._id) }}">✘</a>
+        </p>
+      </div>
+      <!-- Divider-->
+      <hr class="my-4" />
+      {% endfor %}
+
+      <!-- New item -->
+      <div class="d-flex justify-content-end mb-4">
+        <a
+          class="btn btn-primary float-right"
+          href="{{url_for('add_document')}}"
+          >Add New Item</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      <hr class="my-4" />
+      <h1>Software</h1>
+      <hr class="my-4" />
+      <!-- software preview-->
+      {% for item in software_items %}
+      <div class="item-preview">
+        <a href="{{ url_for('show_item', id=item._id) }}">
+          <h2 class="item-componentName">{{ item.softwareName }}</h2>
+          <h3 class="item-componentType">{{ item.softwareType }}</h3>
+        </a>
+        <p class="item-meta">
+          Made by {{item.manufacturer}}
+          <br>
+          Price: £{{item.price}}
+        </p>
+        {% for versions in item.version %}
+          <p class="item-componentName">VersionNumber: {{ versions.versionNumber }}</p>
+            <p class="item-meta"> Size: {{ versions.size }}MB </p>
+            <p class="item-meta"> lastUpdate: {{ versions.lastUpdate }}, Supported: {{ versions.supported }} </p>
+        <hr class="my-4" />
+          {% endfor %}
+      </div>
+      <!-- Divider-->
+      <hr class="my-4" />
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      <hr class="my-4" />
+      <h1>Peripherals</h1>
+      <hr class="my-4" />
+      <!-- peripheral preview-->
+      {% for item in peripheral_items %}
+      <div class="item-preview">
+        <a href="{{ url_for('show_item', id=item._id) }}">
+          <h2 class="item-componentName">{{ item.deviceName }}</h2>
+          <h3 class="item-componentType">{{ item.deviceType }}</h3>
+        </a>
+        <p class="item-meta">
+          Made by {{item.manufacturer}}
+          <br>
+          Price: £{{item.price}}
+        </p>
+        <p class="item-meta">
+          {% if item.colour %}
+          Colour:
+          {% for colours in item.colour %}
+            {{ colours }},
+          {% endfor %}
+          {% endif %}
+        </p>
+      </div>
+      <!-- Divider-->
+      <hr class="my-4" />
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+

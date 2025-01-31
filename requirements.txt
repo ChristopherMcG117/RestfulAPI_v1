@@ -1,0 +1,5 @@
+flask
+bootstrap-flask
+pymongo
+flask_wtf
+pytest
